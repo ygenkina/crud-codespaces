@@ -1,0 +1,86 @@
+$theme-colors: (
+  "primary": #7C4DFF,
+  "secondary":#18A9E6,
+  "info":#0D6796,
+  "danger":#C44539
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+html {
+  @extend .h-100;
+}
+
+body, #__next {
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .h-100;
+  font-family: 'Mulish', sans-serif;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+}
+
+.bio-container {
+  background-color: $gray-300;
+  min-height: 20vh;
+  border-radius: 10px;
+}
+
+.btn {
+  border: 0;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 1.07px;
+  line-height: 1.6;
+  margin: 5px 10px;
+  overflow: visible;
+  padding: 15px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.25s all ease-in-out;
+  width: auto;
+  word-break: break-word;
+
+  &:disabled {
+    background-color: $gray-300;
+  }
+}
+
+.code-font {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+#discovery-button {
+  margin-right: 0px;
+  flex-grow: 2;
+}
+
+#discovery-input {
+  border: 2px solid $info;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 1.07px;
+  line-height: 1.6;
+  margin: 5px 0px;
+  max-width: 75%;
+  padding: 15px 20px;
+}
+
+#discovery-response-body {
+  border: 2px solid $info;
+  border-radius: 10px;
+  max-height: 50vh;
+  min-height: 20vh;
+  overflow: scroll;
+
+  &:focus {
+    border-width: 3px;
+  }
+}
